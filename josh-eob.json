@@ -1,0 +1,341 @@
+//An attempt at mapping https://github.com/jmandel/my-health-data/blob/master/my-data/EOB-redacted.pdf
+//to http://build.fhir.org/ig/HL7/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html
+{
+	"resourceType": "ExplanationOfBenefit",
+	"id": "123",
+	"meta": {
+		"profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility"
+	},
+	"contained": [{
+		"resourceType": "Coverage",
+		"id": "coverage",
+		"status": "active",
+		"type": { "text": "Premera Blue Cross" },
+		"beneficiary": {
+			"reference": "Patient/josh"
+		},
+		"subscriber": {
+			"reference": "Patient/josh"
+		},
+		"policyHolder": {
+			"reference": "Patient/josh"
+		},
+		"subscriberId": "602XXXXXX-01",
+		"class": {
+			"type": {
+				"coding": {
+					"system": "http://hl7.org/fhir/ValueSet/coverage-class",
+					"code": "group",
+					"display": "Group"
+				},
+				"value": "1000010",
+				"name": "MICROSOFT"
+			}
+		},
+		"payor": [{
+			"reference": "#premera"
+		}]
+	},{
+		"resourceType": "Organization",
+		"id": "premera",
+		"type": {
+			"coding": [{
+				"system": "http://hl7.org/fhir/ValueSet/organization-type",
+				"code": "ins",
+				"display": "Insurance Company"
+			}]
+		},
+		"name": "Premera Blue Cross",
+		"address": [{
+			"type": "postal",
+			"line": ["P.O. Box 91059"],
+			"city": "Seattle",
+			"state": "WA",
+			"postalCode": "98111-9159",
+			"country": "USA"
+		}]
+	}],
+	"identifier": [{
+		//This is the "Payment Reference Id" from the PDF - is that that right business identifier for an EOB?
+		"system": "http://premera.com/eob",
+		"value": "20190309ZZZZZZZZ"
+	}],
+	"status": "active",
+	"type": {
+		"coding": [{
+			"system": "http://hl7.org/fhir/ValueSet/claim-type",
+			"code": "professional",
+			"display": "Professional"
+		}]
+	},
+	//This seems odd for an EOB since the only options other than claim are preauth and predetermination. Would these ever apply?
+	"use": "claim",
+	"patient": {
+		"reference": "Patient/josh"
+	},
+	"billablePeriod": {
+		"start": "2019-02-26",
+		"end": "2019-02-26"
+	},
+	//Which of the following dates should be the created date for the EOB -
+	//the PDF has a date of March 9th at the top, but also states that
+	//"Premera received this claim on March 02, 2019. Processing completed on March 05, 2019."?
+	"created": "2019-03-02",
+	"insurer": {
+		"reference": "#premera"
+	},
+	"provider": {
+		"display": "UW HEALTH UNIVERSITY HOSP"
+	},
+	"payee": {
+		"type": {
+			"coding": [{
+				"system": "http://hl7.org/fhir/ValueSet/payeetype",
+				"code": "provider",
+				"display": "Provider"
+			}]
+		},
+		"party": {
+			"display": "UW HEALTH UNIVERSITY HOSP"
+		}
+	},
+	"outcome": "complete",
+	//Claim is removed per the Carin profile. Why is this since the claim id is on the PDF sent to patients?
+	//"claim": {
+		//using an identifier here, but suppose it could also be a reference to a resources or a contained resource
+		//"system": "http://premera.com/claim",
+		//"value": "847YYYYYYYYY"
+	//},
+	//No current dx or procedure info on Josh's EOB so left those items out
+	"insurance": [{
+		"focal": true,
+		"coverage": {
+			"reference": "#coverage"
+		}
+	}],
+	//The item > detail > subDetail structure here seems a little arbitrary - shouldn't there be a more generic parent/child item hierarchy (like in Questionnnaire)?
+	"item": [{
+		//Is the sequence element zero or one based? Don't see anything in the docs, but based on the EOB examples, maybe 1?
+		"sequence": 1,
+		"productOrService": {
+			"text": "Physical Therapy"
+		},
+		"servicedDate": "2019-02-26",
+		//The second note in the EOB seems to apply to the entire claim - not sure where that goes. 
+		//Also, should these be converted to reason CodeableConcepts to be more FHIRish?
+		//It looks like the Carin profile removes the processNote element - where do these map to?
+		"noteNumber": [1, 2],
+		"adjudication": [{
+			//What does a decimal value element of "non-monitary value" mean?
+			"category": {
+				"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "submitted",
+					"display": "Submitted Amount"
+				}]
+			},
+			"amount": {
+				"value": 268,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "benefit",
+					"display": "Benefit Amount"
+				}]
+			},
+			"amount": {
+				"value": 88.44,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "deductible",
+					"display": "Deductible"
+				}]
+			},
+			"amount": {
+				"value": 179.56,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "copay",
+					"display": "CoPay"
+				}]
+			},
+			"amount": {
+				"value": 179.56,
+				"currency": "USD"
+			}
+		}]
+	},{
+		"sequence": 2,
+		"productOrService": {
+			"text": "Physical Therapy"
+		},
+		"servicedDate": "2019-02-26",
+		"noteNumber": [1, 2],
+		"adjudication": [{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "submitted",
+					"display": "Submitted Amount"
+				}]
+			},
+			"amount": {
+				"value": 134,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "benefit",
+					"display": "Benefit Amount"
+				}]
+			},
+			"amount": {
+				"value": 44.22,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "deductible",
+					"display": "Deductible"
+				}]
+			},
+			"amount": {
+				"value": 89.78,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "copay",
+					"display": "CoPay"
+				}]
+			},
+			"amount": {
+				"value": 89.78,
+				"currency": "USD"
+			}
+		}]	
+	},{
+		"sequence": 3,
+		"productOrService": {
+			"text": "Physical Rehab Eval"
+		},
+		"servicedDate": "2019-02-26",
+		"noteNumber": [1, 2],
+		"adjudication": [{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "submitted",
+					"display": "Submitted Amount"
+				}]
+			},
+			"amount": {
+				"value": 320,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "benefit",
+					"display": "Benefit Amount"
+				}]
+			},
+			"amount": {
+				"value": 105.60,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "deductible",
+					"display": "Deductible"
+				}]
+			},
+			"amount": {
+				"value": 214.40,
+				"currency": "USD"
+			}
+		},{
+			"category": {
+				"coding": [{
+					"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+					"code": "copay",
+					"display": "CoPay"
+				}]
+			},
+			"amount": {
+				"value": 214.40,
+				"currency": "USD"
+			}
+		}]
+	}],
+	"total": [{
+		"category": {
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+				"code": "submitted",
+				"display": "Submitted Amount"
+			}]
+		},
+		"amount": {
+			"value": 722,
+			"currency": "USD"
+		}
+	},{
+		"category": {
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+				"code": "benefit",
+				"display": "Benefit Amount"
+			}]
+		},
+		"amount": {
+			"value": 238.26,
+			"currency": "USD"
+		}
+	},{
+		"category": {
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+				"code": "deductible",
+				"display": "Deductible"
+			}]
+		},
+		"amount": {
+			"value": 483.74,
+			"currency": "USD"
+		}
+	},{
+		"category": {
+			"coding": [{
+				"system": "http://terminology.hl7.org/CodeSystem/adjudication",
+				"code": "copay",
+				"display": "CoPay"
+			}]
+		},
+		"amount": {
+			"value": 483.74,
+			"currency": "USD"
+		}
+	}]
+	//How does "payment" element apply here?
+}
