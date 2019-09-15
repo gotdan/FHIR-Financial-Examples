@@ -1,0 +1,2240 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 3,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/ExplanationOfBenefit?patient=d4b1d050-584f-4797-a9c7-ab72e4cd4452&_count=20"
+    },
+    {
+      "relation": "first",
+      "url": "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/ExplanationOfBenefit?_query=d0ecbb1b-0fc3-4f10-aecf-47f7e4b096ca&_count=20&_start=1"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/ExplanationOfBenefit/6f978df0-3121-e611-8128-0a69c1b3225b",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "6f978df0-3121-e611-8128-0a69c1b3225b",
+        "meta": {
+          "lastUpdated": "2016-05-23T22:01:59.137+00:00"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "value": "123456780C3"
+          }
+        ],
+        "_status": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unsupported"
+            },
+            {
+              "url": "http://careevolution.com/fhirextensions#term",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimStatus",
+                    "code": "PAID",
+                    "display": "PAID",
+                    "userSelected": true
+                  }
+                ],
+                "text": "PAID"
+              }
+            }
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimType",
+              "code": "Institutional",
+              "display": "Institutional",
+              "userSelected": true
+            },
+            {
+              "system": "http://fhir.carevolution.com/codes/FhirCodes/ClaimType",
+              "code": "institutional",
+              "display": "Institutional",
+              "userSelected": false
+            },
+            {
+              "system": "http://hl7.org/fhir/ex-claimtype",
+              "code": "institutional"
+            }
+          ],
+          "text": "Institutional"
+        },
+        "patient": {
+          "reference": "Patient/d4b1d050-584f-4797-a9c7-ab72e4cd4452"
+        },
+        "billablePeriod": {
+          "start": "2012-08-31T00:00:00-04:00",
+          "end": "2012-09-10T00:00:00-04:00"
+        },
+        "item": [
+          {
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/MedicationType",
+                  "code": "CALCIUM CARB 1250MG/5ML",
+                  "userSelected": true
+                }
+              ]
+            },
+            "servicedDate": "2012-09-16"
+          },
+          {
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/MedicationType",
+                  "code": "ALBUTEROL 90MCG INHALER",
+                  "userSelected": true
+                }
+              ]
+            },
+            "servicedDate": "2012-09-16"
+          },
+          {
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/MedicationType",
+                  "code": "PREVACID 30MG CAPSULE DR.",
+                  "userSelected": true
+                }
+              ]
+            },
+            "servicedDate": "2012-09-16"
+          },
+          {
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/MedicationType",
+                  "code": "NORVASC 5MG TABLET",
+                  "userSelected": true
+                }
+              ]
+            },
+            "servicedDate": "2012-09-16"
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 3000.54
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/ExplanationOfBenefit/41978df0-3121-e611-8128-0a69c1b3225b",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "41978df0-3121-e611-8128-0a69c1b3225b",
+        "meta": {
+          "lastUpdated": "2016-05-23T22:01:55.57+00:00"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "value": "123456780C2"
+          }
+        ],
+        "_status": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unsupported"
+            },
+            {
+              "url": "http://careevolution.com/fhirextensions#term",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimStatus",
+                    "code": "PAID",
+                    "display": "PAID",
+                    "userSelected": true
+                  }
+                ],
+                "text": "PAID"
+              }
+            }
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimType",
+              "code": "Institutional",
+              "display": "Institutional",
+              "userSelected": true
+            },
+            {
+              "system": "http://fhir.carevolution.com/codes/FhirCodes/ClaimType",
+              "code": "institutional",
+              "display": "Institutional",
+              "userSelected": false
+            },
+            {
+              "system": "http://hl7.org/fhir/ex-claimtype",
+              "code": "institutional"
+            }
+          ],
+          "text": "Institutional"
+        },
+        "patient": {
+          "reference": "Patient/d4b1d050-584f-4797-a9c7-ab72e4cd4452"
+        },
+        "billablePeriod": {
+          "start": "2013-09-01T00:00:00-04:00",
+          "end": "2013-09-11T00:00:00-04:00"
+        },
+        "careTeam": [
+          {
+            "provider": {
+              "reference": "Practitioner/df968df0-3121-e611-8128-0a69c1b3225b"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/CaregiverRelationshipType",
+                  "code": "ClaimProvider",
+                  "display": "Claim Provider",
+                  "userSelected": true
+                }
+              ],
+              "text": "Claim Provider"
+            }
+          },
+          {
+            "provider": {
+              "reference": "Practitioner/de968df0-3121-e611-8128-0a69c1b3225b"
+            },
+            "role": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/CaregiverRelationshipType",
+                  "code": "PayToProvider",
+                  "display": "Pay To Provider",
+                  "userSelected": true
+                },
+                {
+                  "system": "http://fhir.carevolution.com/codes/CareEvolution/CaregiverRelationshipType",
+                  "code": "PayToProvider",
+                  "display": "Pay To Provider",
+                  "userSelected": false
+                }
+              ],
+              "text": "Pay To Provider"
+            }
+          }
+        ],
+        "diagnosis": [
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "518.84",
+                  "display": "ACUTE&CHRONIC RESPIRATORY FAILURE",
+                  "userSelected": true
+                }
+              ],
+              "text": "ACUTE&CHRONIC RESPIRATORY FAILURE"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "Primary",
+                    "display": "Primary Diagnosis",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Primary",
+                    "display": "Primary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "Primary Diagnosis"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "491.21",
+                  "display": "OBST CHRONIC BRONCHITIS W_EXACERBAT",
+                  "userSelected": true
+                }
+              ],
+              "text": "OBST CHRONIC BRONCHITIS W_EXACERBAT"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "Admit",
+                    "display": "Admit",
+                    "userSelected": true
+                  }
+                ],
+                "text": "Admit"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 3,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "416.2",
+                  "display": "CHRONIC PULMONARY EMBOLISM",
+                  "userSelected": true
+                }
+              ],
+              "text": "CHRONIC PULMONARY EMBOLISM"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 4,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "599.0",
+                  "display": "UTI SITE NOT SPECIFIED",
+                  "userSelected": true
+                }
+              ],
+              "text": "UTI SITE NOT SPECIFIED"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 5,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "584.9",
+                  "display": "ACUTE KIDNEY FAILURE UNSPECIFIED",
+                  "userSelected": true
+                }
+              ],
+              "text": "ACUTE KIDNEY FAILURE UNSPECIFIED"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 6,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "491.22",
+                  "display": "OBST CHRN BRONCHITIS W/AC BRONCHIT",
+                  "userSelected": true
+                }
+              ],
+              "text": "OBST CHRN BRONCHITIS W/AC BRONCHIT"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 7,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "V85.43",
+                  "display": "BODY MASS INDEX 50.0-59.9 ADULT",
+                  "userSelected": true
+                }
+              ],
+              "text": "BODY MASS INDEX 50.0-59.9 ADULT"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 8,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "428.32",
+                  "display": "CHRONIC DIASTOLIC HEART FAILURE",
+                  "userSelected": true
+                }
+              ],
+              "text": "CHRONIC DIASTOLIC HEART FAILURE"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 9,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "278.01",
+                  "display": "MORBID OBESITY",
+                  "userSelected": true
+                }
+              ],
+              "text": "MORBID OBESITY"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 10,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "305.1",
+                  "display": "NONDEPENDENT TOBACCO USE DISORDER",
+                  "userSelected": true
+                }
+              ],
+              "text": "NONDEPENDENT TOBACCO USE DISORDER"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 11,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "714.0",
+                  "display": "RHEUMATOID ARTHRITIS",
+                  "userSelected": true
+                }
+              ],
+              "text": "RHEUMATOID ARTHRITIS"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 12,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "458.9",
+                  "display": "UNSPECIFIED HYPOTENSION",
+                  "userSelected": true
+                }
+              ],
+              "text": "UNSPECIFIED HYPOTENSION"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 13,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "276.7",
+                  "display": "HYPERPOTASSEMIA",
+                  "userSelected": true
+                }
+              ],
+              "text": "HYPERPOTASSEMIA"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 14,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "428.0",
+                  "display": "CHF UNSPECIFIED",
+                  "userSelected": true
+                }
+              ],
+              "text": "CHF UNSPECIFIED"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 15,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "250.02",
+                  "display": "DB W_O COMP TYPE II_UNS UNCNTRL",
+                  "userSelected": true
+                }
+              ],
+              "text": "DB W_O COMP TYPE II_UNS UNCNTRL"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 16,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "784.0",
+                  "display": "HEADACHE",
+                  "userSelected": true
+                }
+              ],
+              "text": "HEADACHE"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 17,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "041.4",
+                  "display": "E COLI INFECTION CCE  and  UNS SITE",
+                  "userSelected": true
+                }
+              ],
+              "text": "E COLI INFECTION CCE  and  UNS SITE"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 18,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "530.81",
+                  "display": "ESOPHAGEAL REFLUX",
+                  "userSelected": true
+                }
+              ],
+              "text": "ESOPHAGEAL REFLUX"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2013-09-01T00:00:00-04:00"
+              }
+            ],
+            "sequence": 19,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "799.02",
+                  "display": "HYPOXEMIA",
+                  "userSelected": true
+                }
+              ],
+              "text": "HYPOXEMIA"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "SECONDARY",
+                    "display": "SECONDARY",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "SECONDARY"
+              }
+            ]
+          }
+        ],
+        "procedure": [
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-procedureType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://fhir.carevolution.com/codes/DemoNamespace/ProcedureType",
+                      "code": "SECONDARY",
+                      "display": "SECONDARY",
+                      "userSelected": true
+                    }
+                  ],
+                  "text": "SECONDARY"
+                }
+              }
+            ],
+            "sequence": 0,
+            "date": "2013-09-01T00:00:00-04:00",
+            "procedureCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ProcedureCode",
+                  "code": "00.17",
+                  "display": "INFUSION OF VASOPRESSOR AGENT",
+                  "userSelected": true
+                }
+              ],
+              "text": "INFUSION OF VASOPRESSOR AGENT"
+            }
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-procedureType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "http://fhir.carevolution.com/codes/DemoNamespace/ProcedureType",
+                      "code": "Primary",
+                      "display": "Primary Diagnosis",
+                      "userSelected": true
+                    }
+                  ],
+                  "text": "Primary Diagnosis"
+                }
+              }
+            ],
+            "sequence": 0,
+            "date": "2013-09-01T00:00:00-04:00",
+            "procedureCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ProcedureCode",
+                  "code": "38.97",
+                  "display": "CVC PLACEMENT WITH GUIDANCE",
+                  "userSelected": true
+                }
+              ],
+              "text": "CVC PLACEMENT WITH GUIDANCE"
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "111",
+                  "display": "Room  and  Board - Private - Medical_Surgical_GYN",
+                  "userSelected": true
+                }
+              ],
+              "text": "Room  and  Board - Private - Medical_Surgical_GYN"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "111",
+                  "display": "Room  and  Board - Private - Medical_Surgical_GYN",
+                  "userSelected": true
+                }
+              ],
+              "text": "Room  and  Board - Private - Medical_Surgical_GYN"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 8
+            }
+          },
+          {
+            "sequence": 2,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "200",
+                  "display": "Intensive Care - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Intensive Care - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "200",
+                  "display": "Intensive Care - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Intensive Care - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-01T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 2
+            }
+          },
+          {
+            "sequence": 3,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "230",
+                  "display": "Incremental Nursing Care Rate - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Incremental Nursing Care Rate - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "230",
+                  "display": "Incremental Nursing Care Rate - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Incremental Nursing Care Rate - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-01T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 4,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "250",
+                  "display": "Pharmacy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Pharmacy - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "250",
+                  "display": "Pharmacy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Pharmacy - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 5,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "258",
+                  "display": "Pharmacy - IV Solutions",
+                  "userSelected": true
+                }
+              ],
+              "text": "Pharmacy - IV Solutions"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "258",
+                  "display": "Pharmacy - IV Solutions",
+                  "userSelected": true
+                }
+              ],
+              "text": "Pharmacy - IV Solutions"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 6,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "260",
+                  "display": "IV Therapy -General",
+                  "userSelected": true
+                }
+              ],
+              "text": "IV Therapy -General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "260",
+                  "display": "IV Therapy -General",
+                  "userSelected": true
+                }
+              ],
+              "text": "IV Therapy -General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 7,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "271",
+                  "display": "Medical_Surgical Supplies and Devices - Nonsterile Supply",
+                  "userSelected": true
+                }
+              ],
+              "text": "Medical_Surgical Supplies and Devices - Nonsterile Supply"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "271",
+                  "display": "Medical_Surgical Supplies and Devices - Nonsterile Supply",
+                  "userSelected": true
+                }
+              ],
+              "text": "Medical_Surgical Supplies and Devices - Nonsterile Supply"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 8,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "300",
+                  "display": "Laboratory - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "300",
+                  "display": "Laboratory - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 9,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "301",
+                  "display": "Laboratory - Chemistry",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Chemistry"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "301",
+                  "display": "Laboratory - Chemistry",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Chemistry"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 10,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "302",
+                  "display": "Laboratory - Immunology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Immunology"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "302",
+                  "display": "Laboratory - Immunology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Immunology"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 11,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "305",
+                  "display": "Laboratory - Hematology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Hematology"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "305",
+                  "display": "Laboratory - Hematology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Hematology"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 12,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "306",
+                  "display": "Laboratory - Bacteriology  and  Microbiology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Bacteriology  and  Microbiology"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "306",
+                  "display": "Laboratory - Bacteriology  and  Microbiology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Bacteriology  and  Microbiology"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 13,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "307",
+                  "display": "Laboratory - Urology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Urology"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "307",
+                  "display": "Laboratory - Urology",
+                  "userSelected": true
+                }
+              ],
+              "text": "Laboratory - Urology"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 14,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "324",
+                  "display": "Radiology - Diagnostic - Chest X-Ray",
+                  "userSelected": true
+                }
+              ],
+              "text": "Radiology - Diagnostic - Chest X-Ray"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "324",
+                  "display": "Radiology - Diagnostic - Chest X-Ray",
+                  "userSelected": true
+                }
+              ],
+              "text": "Radiology - Diagnostic - Chest X-Ray"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 15,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "352",
+                  "display": "CT Scan - Body Scan",
+                  "userSelected": true
+                }
+              ],
+              "text": "CT Scan - Body Scan"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "352",
+                  "display": "CT Scan - Body Scan",
+                  "userSelected": true
+                }
+              ],
+              "text": "CT Scan - Body Scan"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 16,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "410",
+                  "display": "Respiratory Services - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Respiratory Services - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "410",
+                  "display": "Respiratory Services - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Respiratory Services - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 59
+            }
+          },
+          {
+            "sequence": 17,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "420",
+                  "display": "Physical Therapy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Physical Therapy - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "420",
+                  "display": "Physical Therapy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Physical Therapy - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 18,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "424",
+                  "display": "Physical Therapy - Evaluation or Reevaluation",
+                  "userSelected": true
+                }
+              ],
+              "text": "Physical Therapy - Evaluation or Reevaluation"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "424",
+                  "display": "Physical Therapy - Evaluation or Reevaluation",
+                  "userSelected": true
+                }
+              ],
+              "text": "Physical Therapy - Evaluation or Reevaluation"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 19,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "430",
+                  "display": "Occupational Therapy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Occupational Therapy - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "430",
+                  "display": "Occupational Therapy - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Occupational Therapy - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 20,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "434",
+                  "display": "Occupational Therapy - Evaluation or Reevaluation",
+                  "userSelected": true
+                }
+              ],
+              "text": "Occupational Therapy - Evaluation or Reevaluation"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "434",
+                  "display": "Occupational Therapy - Evaluation or Reevaluation",
+                  "userSelected": true
+                }
+              ],
+              "text": "Occupational Therapy - Evaluation or Reevaluation"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 21,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "450",
+                  "display": "Emergency Room - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Emergency Room - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "450",
+                  "display": "Emergency Room - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "Emergency Room - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          },
+          {
+            "sequence": 22,
+            "category": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/RevenueCode",
+                  "code": "730",
+                  "display": "EKG_ECG (Electrocardiogram) - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "EKG_ECG (Electrocardiogram) - General"
+            },
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "730",
+                  "display": "EKG_ECG (Electrocardiogram) - General",
+                  "userSelected": true
+                }
+              ],
+              "text": "EKG_ECG (Electrocardiogram) - General"
+            },
+            "servicedPeriod": {
+              "start": "2013-09-01T00:00:00-04:00",
+              "end": "2013-09-11T00:00:00-04:00"
+            },
+            "quantity": {
+              "value": 0
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 15585.54
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.careevolution.com/Master.Adapter1.WebClient/api/fhir-r4/ExplanationOfBenefit/34978df0-3121-e611-8128-0a69c1b3225b",
+      "resource": {
+        "resourceType": "ExplanationOfBenefit",
+        "id": "34978df0-3121-e611-8128-0a69c1b3225b",
+        "meta": {
+          "lastUpdated": "2016-05-23T22:01:55.317+00:00"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "value": "123456780C1"
+          }
+        ],
+        "_status": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unsupported"
+            },
+            {
+              "url": "http://careevolution.com/fhirextensions#term",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimStatus",
+                    "code": "PAID",
+                    "display": "PAID",
+                    "userSelected": true
+                  }
+                ],
+                "text": "PAID"
+              }
+            }
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://fhir.carevolution.com/codes/DemoNamespace/ClaimType",
+              "code": "Professional",
+              "display": "Professional",
+              "userSelected": true
+            },
+            {
+              "system": "http://fhir.carevolution.com/codes/FhirCodes/ClaimType",
+              "code": "professional",
+              "display": "Professional",
+              "userSelected": false
+            },
+            {
+              "system": "http://hl7.org/fhir/ex-claimtype",
+              "code": "professional"
+            }
+          ],
+          "text": "Professional"
+        },
+        "patient": {
+          "reference": "Patient/d4b1d050-584f-4797-a9c7-ab72e4cd4452"
+        },
+        "billablePeriod": {
+          "start": "2015-06-20T00:00:00-04:00",
+          "end": "2015-06-20T00:00:00-04:00"
+        },
+        "diagnosis": [
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2015-06-20T00:00:00-04:00"
+              }
+            ],
+            "sequence": 1,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "250.00",
+                  "display": "DB W_O COMP TYPE II_UNS NOT UNCNTRL",
+                  "userSelected": true
+                }
+              ],
+              "text": "DB W_O COMP TYPE II_UNS NOT UNCNTRL"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "1",
+                    "display": "1",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Primary",
+                    "display": "Primary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "1"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2015-06-20T00:00:00-04:00"
+              }
+            ],
+            "sequence": 2,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "401.1",
+                  "display": "ESSENTIAL HYPERTENSION, BENIGN",
+                  "userSelected": true
+                }
+              ],
+              "text": "ESSENTIAL HYPERTENSION, BENIGN"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "2",
+                    "display": "2",
+                    "userSelected": true
+                  },
+                  {
+                    "system": "http://fhir.carevolution.com/codes/CareEvolution/DiagnosisType",
+                    "code": "Secondary",
+                    "display": "Secondary",
+                    "userSelected": false
+                  }
+                ],
+                "text": "2"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2015-06-20T00:00:00-04:00"
+              }
+            ],
+            "sequence": 3,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "272.4",
+                  "display": "OTHER and UNSPECIFIED HYPERLIPIDEMIA",
+                  "userSelected": true
+                }
+              ],
+              "text": "OTHER and UNSPECIFIED HYPERLIPIDEMIA"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "3",
+                    "display": "3",
+                    "userSelected": true
+                  }
+                ],
+                "text": "3"
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://careevolution.com/fhirextensions#claim-problemDate",
+                "valueDateTime": "2015-06-20T00:00:00-04:00"
+              }
+            ],
+            "sequence": 4,
+            "diagnosisCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisCode",
+                  "code": "593.9",
+                  "display": "UNSPECIFIED DISORDER KIDNEY and URETER",
+                  "userSelected": true
+                }
+              ],
+              "text": "UNSPECIFIED DISORDER KIDNEY and URETER"
+            },
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://fhir.carevolution.com/codes/DemoNamespace/DiagnosisType",
+                    "code": "4",
+                    "display": "4",
+                    "userSelected": true
+                  }
+                ],
+                "text": "4"
+              }
+            ]
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "83036",
+                  "display": "HGB GLYCOSYLATED",
+                  "userSelected": true
+                }
+              ],
+              "text": "HGB GLYCOSYLATED"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 2,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "80061",
+                  "display": "LIPID PANEL",
+                  "userSelected": true
+                }
+              ],
+              "text": "LIPID PANEL"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 3,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "36415",
+                  "display": "COLLJ VEN BLD VNPNXR",
+                  "userSelected": true
+                }
+              ],
+              "text": "COLLJ VEN BLD VNPNXR"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 4,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "81001",
+                  "display": "URNLS DIP STICK/TABLET RGNT AUTO MIC",
+                  "userSelected": true
+                }
+              ],
+              "text": "URNLS DIP STICK/TABLET RGNT AUTO MIC"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 5,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "82570",
+                  "display": "CREATININE OTH SRC",
+                  "userSelected": true
+                }
+              ],
+              "text": "CREATININE OTH SRC"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 6,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "82043",
+                  "display": "ALBUMIN URINE MICROALBUMIN QUAN",
+                  "userSelected": true
+                }
+              ],
+              "text": "ALBUMIN URINE MICROALBUMIN QUAN"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 7,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "82248",
+                  "display": "BILIRUBIN DIR",
+                  "userSelected": true
+                }
+              ],
+              "text": "BILIRUBIN DIR"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          },
+          {
+            "sequence": 8,
+            "productOrService": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceCode",
+                  "code": "80053",
+                  "display": "COMPRE METAB PANEL",
+                  "userSelected": true
+                }
+              ],
+              "text": "COMPRE METAB PANEL"
+            },
+            "servicedPeriod": {
+              "start": "2015-06-20T00:00:00-04:00",
+              "end": "2015-06-20T00:00:00-04:00"
+            },
+            "locationCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://fhir.carevolution.com/codes/DemoNamespace/ServiceLocation",
+                  "code": "81",
+                  "display": "Independent Laboratory",
+                  "userSelected": true
+                }
+              ],
+              "text": "Independent Laboratory"
+            },
+            "quantity": {
+              "value": 1
+            }
+          }
+        ],
+        "payment": {
+          "amount": {
+            "value": 73.69
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
