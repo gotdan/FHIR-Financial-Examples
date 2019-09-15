@@ -1,0 +1,388 @@
+{
+	"resourceType": "ExplanationOfBenefit",
+	"id": "006c200f-132d-49df-a6fa-1a5d44d74dc5",
+	"meta": {
+	  "profile": [
+		"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit"
+	  ]
+	},
+	"contained": [
+	  {
+		"resourceType": "Organization",
+		"id": "organization1",
+		"identifier": [
+		  {
+			"type": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/ValueSet/organization-type",
+				  "code": "prov"
+				}
+			  ]
+			},
+			"system": "urn:oid:2.16.840.1.113883.4.4",
+			"value": "910565546"
+		  }
+		]
+	  },
+	  {
+		"resourceType": "Location",
+		"id": "location1",
+		"address": {
+		  "type": "postal",
+		  "line": [
+			"PO BOX 123"
+		  ],
+		  "city": "PORTLAND",
+		  "state": "OR",
+		  "postalCode": "97226"
+		}
+	  },
+	  {
+		"resourceType": "PractitionerRole",
+		"id": "PractitionerRole1",
+		"identifier": [
+		  {
+			"type": {
+			  "coding": [
+				{
+				  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+				  "code": "PRN",
+				  "display": "Provider Number"
+				}
+			  ],
+			  "text": "National Provider Identifier"
+			},
+			"system": "http://hl7.org/fhir/sid/us-npi",
+			"value": "0000000001"
+		  }
+		],
+		"organization": {
+		  "reference": "#organization1"
+		},
+		"code": [
+		  {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct",
+				"code": "MD"
+			  }
+			]
+		  }
+		],
+		"specialty": [
+		  {
+			"coding": [
+			  {
+				"system": "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+				"code": "MD:CARD",
+				"display": "CARDIOLOGIST"
+			  }
+			],
+			"text": "CARDIOLOGIST"
+		  }
+		],
+		"location": [
+		  {
+			"reference": "#location1"
+		  }
+		]
+	  }
+	],
+	"identifier": [
+	  {
+		"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-claim-identifier",
+		"value": "0000011"
+	  }
+	],
+	"status": "active",
+	"type": {
+	  "coding": [
+		{
+		  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
+		  "code": "oral"
+		}
+	  ]
+	},
+	"use": "claim",
+	"patient": {
+	  "reference": "Patient/06f1844d-68fc-474f-8e0b-a9a39859c613"
+	},
+	"billablePeriod": {
+	  "start": "2018-12-01T16:00:00-08:00",
+	  "end": "2018-12-02T16:00:00-08:00"
+	},
+	"created": "2019-09-03T11:43:40-07:00",
+	"insurer": {
+	  "display": "Regence"
+	},
+	"provider": {
+	  "reference": "#PractitionerRole1"
+	},
+	"payee": {
+	  "type": {
+		"coding": [
+		  {
+			"system": "http://hl7.org/fhir/ValueSet/payeetype",
+			"code": "subscriber"
+		  }
+		]
+	  },
+	  "party": {
+		"reference": "Patient/06f1844d-68fc-474f-8e0b-a9a39859c613"
+	  }
+	},
+	"outcome": "complete",
+	"supportingInfo": [
+	  {
+		"sequence": 1,
+		"category": {
+		  "coding": [
+			{
+			  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+			  "code": "clmrecvddate"
+			}
+		  ]
+		},
+		"timingDate": "2018-12-20"
+	  }
+	],
+	"diagnosis": [
+	  {
+		"sequence": 14971,
+		"diagnosisCodeableConcept": {
+		  "coding": [
+			{
+			  "system": "http://hl7.org/fhir/sid/icd-10",
+			  "code": "I20.0",
+			  "display": "Unstable angina"
+			}
+		  ]
+		},
+		"type": [
+		  {
+			"coding": [
+			  {
+				"system": "http://snomed.info/sct/5991000124107/version/20170901",
+				"code": "Primary"
+			  }
+			]
+		  }
+		]
+	  }
+	],
+	"procedure": [
+	  {
+		"sequence": 25997,
+		"type": [
+		  {
+			"coding": [
+			  {
+				"system": "http://www.ama-assn.org/go/cpt",
+				"code": "544563",
+				"display": "Test Desc"
+			  }
+			]
+		  }
+		]
+	  }
+	],
+	"insurance": [
+	  {
+		"focal": true,
+		"coverage": {
+		  "reference": "Coverage/106c200f-132d-49df-a6fa-1a5d44d74dc5"
+		}
+	  }
+	],
+	"item": [
+	  {
+		"sequence": 1,
+		"diagnosisSequence": [
+		  14971
+		],
+		"procedureSequence": [
+		  25997
+		],
+		"revenue": {
+		  "coding": [
+			{
+			  "system": "https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html",
+			  "code": "122"
+			}
+		  ]
+		},
+		"quantity": {
+		  "value": 2
+		},
+		"adjudication": [
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "submittedamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 250.0
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "allowedamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 186.25
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "deductibleamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 40.0
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "copayamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 25.0
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "patientpayamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 100.0
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "noncoveredamount"
+				}
+			  ]
+			},
+			"reason": {
+			  "coding": [
+				{
+				  "system": "http://www.wpc-edi.com/reference/codelists/healthcare/claim-adjustment-reason-codes",
+				  "code": "15"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 10.0
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "benefitPaymentStatusCode"
+				}
+			  ]
+			},
+			"reason": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "innetworkbenefitpaymentstatus"
+				}
+			  ]
+			}
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "allowedunits"
+				}
+			  ]
+			},
+			"value": 5
+		  },
+		  {
+			"category": {
+			  "coding": [
+				{
+				  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+				  "code": "paymentamount"
+				}
+			  ]
+			},
+			"amount": {
+			  "value": 150.0
+			}
+		  }
+		]
+	  }
+	],
+	"adjudication": [
+	  {
+		"category": {
+		  "coding": [
+			{
+			  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+			  "code": "benefitPaymentStatusCode"
+			}
+		  ]
+		},
+		"reason": {
+		  "coding": [
+			{
+			  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+			  "code": "otherbenefitpaymentstatus"
+			}
+		  ]
+		}
+	  }
+	],
+	"total": [
+	  {
+		"category": {
+		  "coding": [
+			{
+			  "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+			  "code": "patientpayamount"
+			}
+		  ]
+		},
+		"amount": {
+		  "value": 100.00
+		}
+	  }
+	],
+	"payment": {
+	  "date": "2018-12-29"
+	}
+  }
